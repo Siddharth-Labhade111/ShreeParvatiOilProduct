@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cold_white">
+
+    <ImageView
+        android:id="@+id/companyLogo"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:contentDescription="Company Logo"
+        android:src="@drawable/logo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5" />
+
+    <ScrollView
+        android:id="@+id/scrollableArea"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/companyLogo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:fillViewport="true"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/titleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:paddingBottom="8dp"
+                android:text="About Us"
+                android:textColor="#4A2C2A"
+                android:textSize="28sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Welcome to Nutan Industries!"
+                android:textSize="20sp"
+                android:textColor="#BF360C"
+                android:paddingBottom="8dp"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="At Nutan Industries, we are committed to supplying the highest quality infrastructure materials including cement, steel, and other essential building materials. Our focus is to support the construction industry with reliable, durable, and cost-effective products."
+                android:textColor="#424242"
+                android:paddingBottom="8dp"
+                android:justificationMode="inter_word" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Our Story"
+                android:textSize="22sp"
+                android:textColor="#4A2C2A"
+                android:paddingTop="16dp"
+                android:paddingBottom="4dp"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="With decades of experience in the infrastructure sector, Nutan Industries has grown to become a trusted supplier of premium construction materials. From the early days, we’ve focused on sourcing only the best raw materials, ensuring our products meet the highest industry standards."
+                android:textColor="#424242"
+                android:paddingBottom="8dp"
+                android:justificationMode="inter_word" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="What We Offer"
+                android:textSize="22sp"
+                android:textColor="#4A2C2A"
+                android:paddingTop="16dp"
+                android:paddingBottom="4dp"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="- High-Quality Cement: We offer premium cement grades for construction projects of all scales."
+                android:textColor="#424242"
+                android:paddingBottom="4dp"
+                android:justificationMode="inter_word" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="- Durable Steel: Our steel products are manufactured to withstand the toughest conditions, providing long-term strength and reliability."
+                android:textColor="#424242"
+                android:paddingBottom="4dp"
+                android:justificationMode="inter_word" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="- Ready-Mix Concrete: We provide ready-to-use concrete for all types of construction applications."
+                android:textColor="#424242"
+                android:paddingBottom="8dp"
+                android:justificationMode="inter_word" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Why Choose Us?"
+                android:textSize="22sp"
+                android:textColor="#4A2C2A"
+                android:paddingTop="16dp"
+                android:paddingBottom="4dp"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nutan Industries is known for our commitment to quality, integrity, and customer satisfaction. We provide construction materials that help ensure the success of your projects, on time and within budget. Our dedication to the highest standards makes us a reliable partner in building the future."
+                android:textColor="#424242"
+                android:paddingBottom="8dp"
+                android:justificationMode="inter_word" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Join us in building the infrastructure of tomorrow. We’re here to help your projects succeed with our premium materials and excellent service."
+                android:textColor="#424242"
+                android:paddingBottom="8dp"
+                android:justificationMode="inter_word" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Thank you for choosing Nutan Industries!"
+                android:textSize="20sp"
+                android:textColor="#BF360C"
+                android:paddingBottom="8dp"
+                android:gravity="center" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
