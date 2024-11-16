@@ -4,13 +4,11 @@ import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.util.Log
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import java.util.*
 
 class ProductsActivity : AppCompatActivity() {
 
@@ -25,22 +23,11 @@ class ProductsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_products)
 
-        // Initialize RecyclerView
-        try {
-            productsRecyclerView = findViewById(R.id.productsRecyclerView)
-            productsRecyclerView.layoutManager = LinearLayoutManager(this)
-        } catch (e: Exception) {
-            Log.e("ProductsActivity", "Error initializing RecyclerView: ${e.message}")
-        }
-
-        // Initialize other views
-        try {
-            searchEditText = findViewById(R.id.searchEditText)
-            categorySpinner = findViewById(R.id.categorySpinner)
-            btnCheckout = findViewById(R.id.btnCheckout)
-        } catch (e: Exception) {
-            Log.e("ProductsActivity", "Error initializing views: ${e.message}")
-        }
+        // Initialize RecyclerView and views
+        productsRecyclerView = findViewById(R.id.productsRecyclerView)
+        searchEditText = findViewById(R.id.searchEditText)
+        categorySpinner = findViewById(R.id.categorySpinner)
+        btnCheckout = findViewById(R.id.btnCheckout)
 
         // Initialize product list
         products = listOf(
@@ -54,73 +41,59 @@ class ProductsActivity : AppCompatActivity() {
             Product(name = "Fe500 Steel Rod", category = "Steel", price = 2500.0, stock = 12)
         )
 
-        // Set up the adapter with all products and handle Add to Cart button click
-        val adapter = ProductAdapter(products) { product ->
-            addToCart(product)
-        }
+        // Set up adapter with all products
+        val adapter = ProductAdapter(products) { product -> addToCart(product) }
+        productsRecyclerView.layoutManager = LinearLayoutManager(this)
         productsRecyclerView.adapter = adapter
 
-        // Set up search functionality
+        // Set up search and category filter
         setupSearchFunctionality()
-
-        // Set up category filter functionality
         setupCategoryFilter()
 
         // Set up Checkout button
         btnCheckout.setOnClickListener {
-            navigateToCart()  // Navigate to the cart (CalculateBillActivity)
+            navigateToCart()
         }
     }
 
     private fun addToCart(product: Product) {
-        // Check if product is already in the cart
         val existingCartItem = cartItems.find { it.product.name == product.name }
 
         if (existingCartItem != null) {
-            // If product is already in cart, just update the quantity
             existingCartItem.quantity += 1
             Toast.makeText(this, "${product.name} quantity increased", Toast.LENGTH_SHORT).show()
         } else {
-            // If product is not in cart, add a new CartItem with quantity 1
-            val cartItem = CartItem(product, 1)
-            cartItems.add(cartItem)
+            cartItems.add(CartItem(product, 1))
             Toast.makeText(this, "${product.name} added to cart", Toast.LENGTH_SHORT).show()
         }
     }
 
     private fun navigateToCart() {
         val intent = Intent(this, CalculateBillActivity::class.java)
-        // Ensure cartItems is properly serialized and passed as an ArrayList
         intent.putExtra("cartItems", ArrayList(cartItems))  // Pass cart items as an ArrayList
         startActivity(intent)
     }
 
-
-
     private fun setupSearchFunctionality() {
         searchEditText.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {
-                val query = s.toString().trim().lowercase(Locale.getDefault())
+                val query = s.toString().trim().toLowerCase()
                 filterProducts(query)
             }
 
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
-
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
         })
     }
 
     private fun filterProducts(query: String) {
-        val filteredList = products.filter { product ->
-            product.name.lowercase(Locale.getDefault()).contains(query)
-        }
+        val filteredList = products.filter { it.name.toLowerCase().contains(query) }
         (productsRecyclerView.adapter as ProductAdapter).updateProductList(filteredList)
     }
 
     private fun setupCategoryFilter() {
-        val categories = listOf("All", "Cement", "Steel")  // Categories to filter by
+        val categories = listOf("All", "Cement", "Steel")
         val categoryAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, categories)
-        categoryAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         categorySpinner.adapter = categoryAdapter
 
         categorySpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {

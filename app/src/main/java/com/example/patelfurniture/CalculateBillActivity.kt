@@ -2,7 +2,6 @@ package com.example.patelfurniture
 
 import android.os.Bundle
 import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -25,18 +24,16 @@ class CalculateBillActivity : AppCompatActivity() {
         grandTotalText = findViewById(R.id.grandTotalText)
         grandTotalValue = findViewById(R.id.grandTotalValue)
 
-        // Get cart items from intent
+        // Retrieve cart items from the Intent
         val cartData = intent.getSerializableExtra("cartItems")
         if (cartData != null) {
             cartItems = cartData as ArrayList<CartItem>
-        } else {
-            Toast.makeText(this, "No items in cart", Toast.LENGTH_SHORT).show()
         }
 
         // Set up RecyclerView
         cartAdapter = CartAdapter(cartItems)
-        cartRecyclerView.adapter = cartAdapter
         cartRecyclerView.layoutManager = LinearLayoutManager(this)
+        cartRecyclerView.adapter = cartAdapter
 
         // Update grand total
         updateGrandTotal()
@@ -44,6 +41,6 @@ class CalculateBillActivity : AppCompatActivity() {
 
     private fun updateGrandTotal() {
         val total = cartItems.sumOf { it.totalPrice }
-        grandTotalValue.text = "$${"%.2f".format(total)}"
+        grandTotalValue.text = "₹${"%.2f".format(total)}"
     }
 }
