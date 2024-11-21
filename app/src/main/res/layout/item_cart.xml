@@ -1,36 +1,71 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="16dp"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="@android:color/white"
+    android:elevation="2dp"
+    android:layout_margin="5dp">
 
+    <!-- Product Name -->
     <TextView
-        android:id="@+id/tv_product_name"
-        android:layout_width="wrap_content"
+        android:id="@+id/tvProductName"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Product Name"
-        android:textSize="16sp" />
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black" />
 
+    <!-- Quantity -->
     <TextView
-        android:id="@+id/tv_product_price"
-        android:layout_width="wrap_content"
+        android:id="@+id/tvQuantity"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Price"
-        android:textSize="14sp"
-        android:textColor="#6200EE" />
+        android:text="Quantity: 1"
+        android:textSize="16sp"
+        android:textColor="@android:color/darker_gray"
+        android:layout_marginTop="5dp" />
 
+    <!-- Total Price -->
     <TextView
-        android:id="@+id/tv_product_quantity"
-        android:layout_width="wrap_content"
+        android:id="@+id/tvTotalPrice"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Quantity"
-        android:textSize="14sp" />
+        android:text="Total: ₹0"
+        android:textSize="16sp"
+        android:textColor="@android:color/darker_gray"
+        android:layout_marginTop="5dp" />
 
-    <TextView
-        android:id="@+id/tv_total_price"
-        android:layout_width="wrap_content"
+    <!-- Buttons: Increase Quantity and Delete -->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Total Price"
-        android:textColor="#4CAF50"
-        android:textSize="14sp" />
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <!-- Increase Quantity Button -->
+        <Button
+            android:id="@+id/btnIncreaseQuantity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Increase Quantity"
+            android:backgroundTint="#0B0A0A"
+            android:textColor="@android:color/white" />
+
+        <!-- Delete Button -->
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Delete"
+            android:backgroundTint="#FF0000"
+            android:textColor="@android:color/white"
+            android:layout_marginStart="10dp" />
+    </LinearLayout>
+
 </LinearLayout>

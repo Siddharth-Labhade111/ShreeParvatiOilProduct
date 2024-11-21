@@ -1,14 +1,15 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.google.gms.google.services)
 }
 
 android {
-    namespace = "com.example.patelfurniture"
+    namespace = "com.example.nutanindustries1"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.patelfurniture"
+        applicationId = "com.example.nutanindustries1"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -47,6 +48,8 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
+    implementation(libs.firebase.database)
+    implementation("com.google.code.gson:gson:2.8.9")
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
