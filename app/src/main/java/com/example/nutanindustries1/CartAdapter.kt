@@ -4,12 +4,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 class CartAdapter(
     private val cartList: MutableList<CartItem>,
     private val onIncreaseQuantity: (CartItem) -> Unit,
+    private val onDecreaseQuantity: (CartItem) -> Unit,
     private val onDelete: (CartItem) -> Unit
 ) : RecyclerView.Adapter<CartAdapter.CartViewHolder>() {
 
@@ -17,7 +19,8 @@ class CartAdapter(
         val tvProductName: TextView = itemView.findViewById(R.id.tvProductName)
         val tvQuantity: TextView = itemView.findViewById(R.id.tvQuantity)
         val tvTotalPrice: TextView = itemView.findViewById(R.id.tvTotalPrice)
-        val btnIncrease: Button = itemView.findViewById(R.id.btnIncreaseQuantity)
+        val btnIncrease: ImageView = itemView.findViewById(R.id.btnIncreaseQuantity)
+        val btnDecrease: ImageView = itemView.findViewById(R.id.btnDecreaseQuantity)
         val btnDelete: Button = itemView.findViewById(R.id.btnDelete)
     }
 
@@ -33,8 +36,20 @@ class CartAdapter(
         holder.tvQuantity.text = "Quantity: ${cartItem.quantity}"
         holder.tvTotalPrice.text = "Total: ₹${cartItem.totalPrice}"
 
-        holder.btnIncrease.setOnClickListener { onIncreaseQuantity(cartItem) }
-        holder.btnDelete.setOnClickListener { onDelete(cartItem) }
+        // Handle the increase quantity button click
+        holder.btnIncrease.setOnClickListener {
+            onIncreaseQuantity(cartItem)
+        }
+
+        // Handle the decrease quantity button click
+        holder.btnDecrease.setOnClickListener {
+            onDecreaseQuantity(cartItem)
+        }
+
+        // Handle the delete button click
+        holder.btnDelete.setOnClickListener {
+            onDelete(cartItem)
+        }
     }
 
     override fun getItemCount(): Int = cartList.size

@@ -39,33 +39,47 @@
         android:textColor="@android:color/darker_gray"
         android:layout_marginTop="5dp" />
 
-    <!-- Buttons: Increase Quantity and Delete -->
+    <!-- Buttons: Decrease, Delete, and Increase -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="10dp">
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical">
 
-        <!-- Increase Quantity Button -->
-        <Button
+        <!-- Increase Quantity Button (Left) -->
+        <ImageView
             android:id="@+id/btnIncreaseQuantity"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Increase Quantity"
-            android:backgroundTint="#0B0A0A"
-            android:textColor="@android:color/white" />
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="start"
+            android:layout_marginRight="75dp"
+            android:src="@drawable/increase"
+            android:clickable="true"
+            android:focusable="true" />
 
-        <!-- Delete Button -->
+        <!-- Delete Button (Center) -->
+
+        <!-- Decrease Quantity Button (Right) -->
         <Button
             android:id="@+id/btnDelete"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Delete"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="18dp"
             android:backgroundTint="#FF0000"
-            android:textColor="@android:color/white"
-            android:layout_marginStart="10dp" />
-    </LinearLayout>
+            android:text="Delete"
+            android:textColor="@android:color/white" />
 
+        <ImageView
+            android:id="@+id/btnDecreaseQuantity"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="end"
+            android:layout_marginLeft="70dp"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/decrease" />
+    </LinearLayout>
 </LinearLayout>

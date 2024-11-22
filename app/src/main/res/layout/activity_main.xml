@@ -18,7 +18,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5" />
+        app:layout_constraintHorizontal_bias="0.5"
+        android:layout_marginTop="24dp" />
 
     <!-- Scrollable Area Below the Logo -->
     <ScrollView
@@ -29,7 +30,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:background="#FFFFFF"
+        android:padding="16dp"
         android:fillViewport="true">
 
         <!-- LinearLayout for the Squares (aligned at the top) -->
@@ -37,7 +38,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:gravity="center_horizontal">
 
             <!-- Horizontal Layout for Squares (1st Row) -->
             <LinearLayout
@@ -52,20 +53,33 @@
                     android:layout_width="0dp"
                     android:layout_height="150dp"
                     android:layout_weight="1"
-                    app:cardCornerRadius="16dp"
-                    app:cardElevation="8dp"
+                    app:cardCornerRadius="24dp"
+                    app:cardElevation="12dp"
                     android:layout_margin="8dp"
-                    android:backgroundTint="#FFFFFF">
+                    app:strokeColor="#1E3A8A"
+                    app:strokeWidth="2dp"
+                    android:backgroundTint="@android:color/white">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Products"
-                        android:textSize="20sp"
-                        android:textStyle="bold"
-                        android:textColor="#1E3A8A"
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:gravity="center"
-                        android:layout_gravity="center" />
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/products"
+                            android:layout_marginBottom="8dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Products"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="#1E3A8A" />
+                    </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
                 <!-- Second Square with "Calculate Bill" Text -->
@@ -74,20 +88,33 @@
                     android:layout_width="0dp"
                     android:layout_height="150dp"
                     android:layout_weight="1"
-                    app:cardCornerRadius="16dp"
-                    app:cardElevation="8dp"
+                    app:cardCornerRadius="24dp"
+                    app:cardElevation="12dp"
                     android:layout_margin="8dp"
-                    android:backgroundTint="#FFFFFF">
+                    app:strokeColor="#1E3A8A"
+                    app:strokeWidth="2dp"
+                    android:backgroundTint="@android:color/white">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Calculate Bill"
-                        android:textSize="20sp"
-                        android:textStyle="bold"
-                        android:textColor="#1E3A8A"
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:gravity="center"
-                        android:layout_gravity="center" />
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/invoice"
+                            android:layout_marginBottom="8dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Calculate Bill"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="#1E3A8A" />
+                    </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
             </LinearLayout>
@@ -105,20 +132,33 @@
                     android:layout_width="0dp"
                     android:layout_height="150dp"
                     android:layout_weight="1"
-                    app:cardCornerRadius="16dp"
-                    app:cardElevation="8dp"
+                    app:cardCornerRadius="24dp"
+                    app:cardElevation="12dp"
                     android:layout_margin="8dp"
-                    android:backgroundTint="#FFFFFF">
+                    app:strokeColor="#1E3A8A"
+                    app:strokeWidth="2dp"
+                    android:backgroundTint="@android:color/white">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="About Us"
-                        android:textSize="20sp"
-                        android:textStyle="bold"
-                        android:textColor="#1E3A8A"
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:gravity="center"
-                        android:layout_gravity="center" />
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/about"
+                            android:layout_marginBottom="8dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="About Us"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="#1E3A8A" />
+                    </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
                 <!-- Fourth Square with "Contact Us" Text -->
@@ -127,24 +167,38 @@
                     android:layout_width="0dp"
                     android:layout_height="150dp"
                     android:layout_weight="1"
-                    app:cardCornerRadius="16dp"
-                    app:cardElevation="8dp"
+                    app:cardCornerRadius="24dp"
+                    app:cardElevation="12dp"
                     android:layout_margin="8dp"
-                    android:backgroundTint="#FFFFFF">
+                    app:strokeColor="#1E3A8A"
+                    app:strokeWidth="2dp"
+                    android:backgroundTint="@android:color/white">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Contact Us"
-                        android:textSize="20sp"
-                        android:textStyle="bold"
-                        android:textColor="#1E3A8A"
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:gravity="center"
-                        android:layout_gravity="center" />
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/contact"
+                            android:layout_marginBottom="8dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Contact Us"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="#1E3A8A" />
+                    </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
             </LinearLayout>
 
         </LinearLayout>
     </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
