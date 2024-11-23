@@ -1,22 +1,22 @@
 {
   "project_info": {
-    "project_number": "680901070123",
-    "firebase_url": "https://nutan-industries1-default-rtdb.firebaseio.com",
-    "project_id": "nutan-industries1",
-    "storage_bucket": "nutan-industries1.firebasestorage.app"
+    "project_number": "419222365870",
+    "firebase_url": "https://shriparvatioilproducts-default-rtdb.firebaseio.com",
+    "project_id": "shriparvatioilproducts",
+    "storage_bucket": "shriparvatioilproducts.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:680901070123:android:42f7ad3369c03d23d3096e",
+        "mobilesdk_app_id": "1:419222365870:android:1b3ffa992ad1b6cb9b6f3f",
         "android_client_info": {
-          "package_name": "com.example.admin"
+          "package_name": "com.example.adminshriparvatioilandproduct"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDTcmcOdGlIIq_e9j0nYgZOZ7TFt3iN380"
+          "current_key": "AIzaSyBACZtb-5pN9txszxF1wVz6Q_sq3s0u8OE"
         }
       ],
       "services": {
@@ -27,15 +27,53 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:680901070123:android:fd40b5740df62d85d3096e",
+        "mobilesdk_app_id": "1:419222365870:android:6ae73f132bd0f8bf9b6f3f",
         "android_client_info": {
-          "package_name": "com.example.nutanindustries1"
+          "package_name": "com.example.shreeparvatioilandproducts"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDTcmcOdGlIIq_e9j0nYgZOZ7TFt3iN380"
+          "current_key": "AIzaSyBACZtb-5pN9txszxF1wVz6Q_sq3s0u8OE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:419222365870:android:1dcfea6d9bd3538c9b6f3f",
+        "android_client_info": {
+          "package_name": "com.example.shreesaiparvatioil"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBACZtb-5pN9txszxF1wVz6Q_sq3s0u8OE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:419222365870:android:6384ab21e9832d7c9b6f3f",
+        "android_client_info": {
+          "package_name": "com.sanjivani.shriparvatioilmill"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBACZtb-5pN9txszxF1wVz6Q_sq3s0u8OE"
         }
       ],
       "services": {

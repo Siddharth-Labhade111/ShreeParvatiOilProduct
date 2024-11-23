@@ -1,6 +1,11 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="startcolor">#53E88B</color>
+    <color name="endcolor">#15BE77</color>
+    <color name="iconcolor">#FEAD1D</color>
+    <color name="bgcolor">#F9F3E6</color>
+    <color name="textcolor">#558918</color>
     <color name="cold_white">#E1F5FE</color>
     <color name="primary">#1E3A8A</color> <!-- New primary color for buttons or text -->
     <color name="secondary">#0288D1</color> <!-- Secondary color for highlights -->

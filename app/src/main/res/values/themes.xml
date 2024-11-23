@@ -5,5 +5,5 @@
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
-    <style name="Theme.nutanindustries1" parent="Base.Theme.PatelFurniture" />
+    <style name="Theme.shreeparvatioilandproducts" parent="Base.Theme.PatelFurniture" />
 </resources>

@@ -9,56 +9,58 @@
     tools:context=".MainActivity">
 
     <!-- Company Logo at the Top with Larger Size -->
-    <ImageView
-        android:id="@+id/companyLogo"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:contentDescription="Company Logo"
-        android:src="@drawable/logo"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        android:layout_marginTop="24dp" />
 
     <!-- Scrollable Area Below the Logo -->
+    <ImageView
+        android:id="@+id/companyLogo"
+        android:layout_width="57dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="Company Logo"
+        android:src="@drawable/logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ScrollView
         android:id="@+id/scrollableArea"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintTop_toBottomOf="@id/companyLogo"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:fillViewport="true"
         android:padding="16dp"
-        android:fillViewport="true">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/companyLogo"
+        app:layout_constraintVertical_bias="0.0">
 
         <!-- LinearLayout for the Squares (aligned at the top) -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center_horizontal">
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
 
             <!-- Horizontal Layout for Squares (1st Row) -->
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="horizontal">
 
                 <!-- First Square with "Products" Text -->
                 <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/productsSquare"
-                    android:layout_width="0dp"
-                    android:layout_height="150dp"
+                    android:id="@+id/contactUsSquare"
+                    android:layout_width="54dp"
+                    android:layout_height="78dp"
+                    android:layout_margin="8dp"
                     android:layout_weight="1"
+                    android:backgroundTint="#F4E3B1"
                     app:cardCornerRadius="24dp"
                     app:cardElevation="12dp"
-                    android:layout_margin="8dp"
-                    app:strokeColor="#1E3A8A"
-                    app:strokeWidth="2dp"
-                    android:backgroundTint="@android:color/white">
+                    app:strokeColor="#D08415"
+                    app:strokeWidth="2dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -67,33 +69,101 @@
                         android:orientation="vertical">
 
                         <ImageView
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:src="@drawable/products"
-                            android:layout_marginBottom="8dp" />
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:src="@drawable/contact" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Contact Us"
+                            android:textSize="10sp"
+                            android:textStyle="bold"
+                            app:strokeColor="#D08415" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/aboutUsSquare"
+                    android:layout_width="54dp"
+                    android:layout_height="78dp"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#F4E3B1"
+                    app:cardCornerRadius="24dp"
+                    app:cardElevation="12dp"
+                    app:strokeColor="#D08415"
+                    app:strokeWidth="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="26dp"
+                            android:layout_height="27dp"
+                            android:layout_marginBottom="8dp"
+                            android:src="@drawable/about" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="About Us"
+                            android:textSize="10sp"
+                            android:textStyle="bold"
+                            app:strokeColor="#D08415" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/productsSquare"
+                    android:layout_width="54dp"
+                    android:layout_height="78dp"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#F4E3B1"
+                    app:cardCornerRadius="24dp"
+                    app:cardElevation="12dp"
+                    app:strokeColor="#D08415"
+                    app:strokeWidth="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="36dp"
+                            android:layout_height="33dp"
+                            android:layout_marginBottom="8dp"
+                            android:src="@drawable/products" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Products"
-                            android:textSize="18sp"
+                            android:textSize="10sp"
                             android:textStyle="bold"
-                            android:textColor="#1E3A8A" />
+                            app:strokeColor="#D08415" />
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
                 <!-- Second Square with "Calculate Bill" Text -->
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/calculateBillSquare"
-                    android:layout_width="0dp"
-                    android:layout_height="150dp"
+                    android:layout_width="54dp"
+                    android:layout_height="78dp"
+                    android:layout_margin="8dp"
                     android:layout_weight="1"
+                    android:backgroundTint="#F4E3B1"
                     app:cardCornerRadius="24dp"
                     app:cardElevation="12dp"
-                    android:layout_margin="8dp"
-                    app:strokeColor="#1E3A8A"
-                    app:strokeWidth="2dp"
-                    android:backgroundTint="@android:color/white">
+                    app:strokeColor="#D08415"
+                    app:strokeWidth="2dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -102,103 +172,65 @@
                         android:orientation="vertical">
 
                         <ImageView
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:src="@drawable/invoice"
-                            android:layout_marginBottom="8dp" />
+                            android:layout_width="36dp"
+                            android:layout_height="33dp"
+                            android:layout_marginBottom="8dp"
+                            android:src="@drawable/invoice" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Calculate Bill"
-                            android:textSize="18sp"
+                            android:text="Cart"
+                            android:textSize="10sp"
                             android:textStyle="bold"
-                            android:textColor="#1E3A8A" />
+                            app:strokeColor="#D08415" />
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
             </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="354dp"
+                android:layout_height="231dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                app:cardCornerRadius="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+
+            </androidx.cardview.widget.CardView>
 
             <!-- Horizontal Layout for Squares (2nd Row) -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center">
-
-                <!-- Third Square with "About Us" Text -->
-                <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/aboutUsSquare"
-                    android:layout_width="0dp"
-                    android:layout_height="150dp"
-                    android:layout_weight="1"
-                    app:cardCornerRadius="24dp"
-                    app:cardElevation="12dp"
-                    android:layout_margin="8dp"
-                    app:strokeColor="#1E3A8A"
-                    app:strokeWidth="2dp"
-                    android:backgroundTint="@android:color/white">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:src="@drawable/about"
-                            android:layout_marginBottom="8dp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="About Us"
-                            android:textSize="18sp"
-                            android:textStyle="bold"
-                            android:textColor="#1E3A8A" />
-                    </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
-
-                <!-- Fourth Square with "Contact Us" Text -->
-                <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/contactUsSquare"
-                    android:layout_width="0dp"
-                    android:layout_height="150dp"
-                    android:layout_weight="1"
-                    app:cardCornerRadius="24dp"
-                    app:cardElevation="12dp"
-                    android:layout_margin="8dp"
-                    app:strokeColor="#1E3A8A"
-                    app:strokeWidth="2dp"
-                    android:backgroundTint="@android:color/white">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:src="@drawable/contact"
-                            android:layout_marginBottom="8dp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Contact Us"
-                            android:textSize="18sp"
-                            android:textStyle="bold"
-                            android:textColor="#1E3A8A" />
-                    </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
-
-            </LinearLayout>
 
         </LinearLayout>
     </ScrollView>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="208dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/aclonica"
+        android:text="Shri Parvati Oil And Food "
+        app:layout_constraintBottom_toBottomOf="@+id/companyLogo"
+        app:layout_constraintStart_toEndOf="@+id/companyLogo"
+        app:layout_constraintTop_toTopOf="@+id/companyLogo"
+        app:layout_constraintVertical_bias="0.379" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="36dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/scrollableArea"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/bell" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

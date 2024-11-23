@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.nutanindustries1">
-
+    xmlns:tools="http://schemas.android.com/tools">
     <!-- Example permission for internet access -->
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -11,47 +9,55 @@
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
-        android:label="NUTAN INDUSTRIES"
+        android:label="SHREE SAI PARVATI OIL AND PRODUCTS"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.nutanindustries1"
+        android:theme="@style/Theme.shreeparvatioilandproducts"
         tools:targetApi="31">
-
-        <!-- MainActivity with launcher intent -->
         <activity
-            android:exported="true"
-            android:name=".MainActivity">
+            android:name=".SignActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PayOutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <!-- Products Activity -->
         <activity
+            android:name=".StartActivity"
+            android:exported="true" /> <!-- MainActivity with launcher intent -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" /> <!-- Products Activity -->
+        <activity
+            android:name=".ProductsActivity"
             android:exported="true"
-            android:theme="@style/Theme.nutanindustries1"
-            android:name=".ProductsActivity" />
-
-        <!-- Cart Activity -->
+            android:theme="@style/Theme.shreeparvatioilandproducts" /> <!-- Cart Activity -->
         <activity
+            android:name=".CalculateBillActivity"
             android:exported="true"
-            android:theme="@style/Theme.nutanindustries1"
-            android:name=".CalculateBillActivity" />
-
-
-        <!-- About Us Activity -->
+            android:theme="@style/Theme.shreeparvatioilandproducts" /> <!-- About Us Activity -->
         <activity
+            android:name=".AboutUsActivity"
             android:exported="false"
-            android:theme="@style/Theme.nutanindustries1"
-            android:name=".AboutUsActivity" />
-
-        <!-- Contact Us Activity -->
+            android:theme="@style/Theme.shreeparvatioilandproducts" /> <!-- Contact Us Activity -->
         <activity
+            android:name=".ContactUsActivity"
             android:exported="false"
-            android:theme="@style/Theme.nutanindustries1"
-            android:name=".ContactUsActivity" />
+            android:theme="@style/Theme.shreeparvatioilandproducts" />
 
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
