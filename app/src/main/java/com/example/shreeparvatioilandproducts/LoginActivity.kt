@@ -42,10 +42,11 @@ class LoginActivity : AppCompatActivity() {
                 loginUser(email, password)
             }
 
+
+            }
             binding.donthaveaccount.setOnClickListener {
                 val intent=Intent(this,SignActivity::class.java)
                 startActivity(intent)
-            }
 
         }
     }

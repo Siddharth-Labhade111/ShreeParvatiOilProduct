@@ -5,121 +5,124 @@
     android:id="@+id/signup"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="14dp"
-    android:background="@drawable/preofileedittextshape"
-    android:elevation="5dp"
+
     tools:context=".SignActivity">
 
+    <!-- Title -->
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/aclonica"
+        android:text="SIGN UP"
+        android:textAlignment="center"
+        android:textSize="36sp"
+        android:textColor="#876B15"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Logo Image -->
+    <ImageView
+        android:id="@+id/signupImage"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/logo"
+        app:layout_constraintTop_toBottomOf="@id/textView24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Subtitle -->
     <TextView
         android:id="@+id/textview1"
-        android:layout_width="257dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="44dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/aclonica"
-        android:text="SHRI PARVATI OIL MILL "
+        android:text="SHRI PARVATI OIL MILL"
         android:textAlignment="center"
         android:textColor="#7E6F6F"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/textView24"
-        app:layout_constraintStart_toStartOf="@+id/textView24"
-        app:layout_constraintTop_toBottomOf="@+id/textView24" />
+        app:layout_constraintTop_toBottomOf="@id/signupImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
+    <!-- Name Input -->
     <EditText
         android:id="@+id/namesignup"
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:layout_marginTop="16dp"
-
-        android:drawablePadding="10dp"
-        android:elevation="5dp"
-        android:ems="10"
-        android:fontFamily="@font/aclonica"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/preofileedittextshape"
         android:hint="Name"
         android:inputType="text"
+        android:fontFamily="@font/aclonica"
         android:paddingLeft="15dp"
-        app:layout_constraintEnd_toEndOf="@+id/password"
-        app:layout_constraintStart_toStartOf="@+id/password"
-        app:layout_constraintTop_toBottomOf="@+id/password" />
+        app:layout_constraintTop_toBottomOf="@id/textview1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
+    <!-- Email Input -->
     <EditText
         android:id="@+id/email"
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:layout_marginTop="24dp"
-
-
-        android:drawablePadding="10dp"
-        android:elevation="5dp"
-        android:ems="10"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/preofileedittextshape"
         android:hint="Email"
         android:inputType="textEmailAddress"
+        android:fontFamily="@font/aclonica"
         android:paddingLeft="15dp"
-        app:layout_constraintEnd_toEndOf="@+id/textview1"
-        app:layout_constraintStart_toStartOf="@+id/textview1"
-        app:layout_constraintTop_toBottomOf="@+id/textview1" />
+        app:layout_constraintTop_toBottomOf="@id/namesignup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
+    <!-- Password Input -->
     <EditText
         android:id="@+id/password"
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:layout_marginTop="14dp"
-
-
-        android:drawablePadding="10dp"
-        android:elevation="5dp"
-        android:ems="10"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/preofileedittextshape"
         android:hint="Password"
         android:inputType="textPassword"
+        android:fontFamily="@font/aclonica"
         android:paddingLeft="15dp"
-        app:layout_constraintEnd_toEndOf="@+id/email"
-        app:layout_constraintStart_toStartOf="@+id/email"
-        app:layout_constraintTop_toBottomOf="@+id/email" />
+        app:layout_constraintTop_toBottomOf="@id/email"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-
+    <!-- Create Account Button -->
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/createuserbutton"
         android:layout_width="140dp"
         android:layout_height="45dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="133dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/greenbuttongradient"
         android:text="Create Account"
-        android:textAlignment="center"
-        android:textAllCaps="false"
+        android:fontFamily="@font/aclonica"
+        android:textSize="16sp"
         android:textColor="@color/white"
-        android:textSize="17sp"
-        app:layout_constraintBottom_toTopOf="@+id/dontHaveAccountTextView"
-        app:layout_constraintEnd_toEndOf="@+id/namesignup"
-        app:layout_constraintStart_toStartOf="@+id/namesignup"
-        app:layout_constraintTop_toBottomOf="@+id/namesignup"
-        tools:ignore="MissingConstraints" />
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@id/password"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
+    <!-- Already Have an Account Text -->
     <TextView
         android:id="@+id/dontHaveAccountTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/aclonica"
-        android:text="Already Have An Account ?"
+        android:text="Already Have an Account?"
         android:textAlignment="center"
         android:textColor="#7E6F6F"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/createuserbutton"
-        app:layout_constraintStart_toStartOf="@+id/createuserbutton"
-        app:layout_constraintTop_toBottomOf="@+id/createuserbutton"
-        app:layout_constraintVertical_bias="0.32" />
-
-    <TextView
-        android:id="@+id/textView24"
-        android:layout_width="333dp"
-        android:layout_height="63dp"
-        android:layout_marginTop="72dp"
-        android:fontFamily="@font/aclonica"
-        android:text="Sign Up"
-        android:textAlignment="center"
-        android:textColor="#876B15"
-        android:textSize="34sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/createuserbutton"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

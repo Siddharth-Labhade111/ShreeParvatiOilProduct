@@ -1,5 +1,4 @@
 package com.example.shreeparvatioilandproducts
-
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -47,7 +46,7 @@ class SignActivity : AppCompatActivity() {
             }
         }
         binding.dontHaveAccountTextView.setOnClickListener {
-            val intent = Intent(this, SignActivity::class.java)
+            val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
 
